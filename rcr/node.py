@@ -6,7 +6,6 @@ from typing import Optional
 class Node:
     value: str
     freq: int
-    x: str | None = None
     code: str | None = None
     left: Optional["Node"] = None
     right: Optional["Node"] = None
