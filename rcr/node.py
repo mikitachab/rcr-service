@@ -27,14 +27,14 @@ class NodesHeap:
     """
 
     def __init__(self, nodes):
-        self.nodes = [(node.freq, node) for node in nodes]
+        self.nodes = nodes
 
     def push(self, node):
-        self.nodes.append((node.freq, node))
-        self.nodes.sort()
+        self.nodes.append(node)
+        self.nodes.sort(key=lambda x: x.freq)
 
     def pop(self):
-        return self.nodes.pop(0)[1]
+        return self.nodes.pop(0)
 
     def __len__(self):
         return len(self.nodes)
